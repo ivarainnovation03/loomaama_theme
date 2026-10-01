@@ -1,0 +1,543 @@
+/* ============================================
+   SHIPPING & PACKAGING PAGE SPECIFIC STYLES
+   Updated with packaging.html design
+   ============================================ */
+
+:root {
+    --cream: #F4EEE4;
+    --paper: #FBF8F3;
+    --taupe: #9E8574;
+    --ink: #1a1a1b;
+    --muted: #6f625a;
+    --line: rgba(158, 133, 116, 0.34);
+    --bg-editorial: #F7F3EE;
+    --wild-nettle: #8A9A86;
+    --border: #E5E5E5;
+    --text-main: #1A1A1A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+h1, h2, h3 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.04em;
+}
+
+/* ============================================
+   HERO SECTION (from packaging.html)
+   ============================================ */
+.shipping-hero {
+    min-height: 100vh;
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+}
+
+.shipping-hero-copy {
+    padding: 90px 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.shipping-hero-copy h1 {
+    font-size: 92px;
+    line-height: 0.9;
+    margin: 0;
+}
+
+.shipping-hero-copy p {
+    max-width: 520px;
+    font-size: 19px;
+    margin-top: 30px;
+    color: var(--muted);
+}
+
+.shipping-hero-stage {
+    position: relative;
+    background: var(--paper);
+}
+
+.package-layer {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+.layer-a {
+    width: 58%;
+    height: 62%;
+    left: 12%;
+    top: 12%;
+}
+
+.layer-b {
+    width: 48%;
+    height: 38%;
+    right: 8%;
+    bottom: 16%;
+}
+
+.layer-note {
+    position: absolute;
+    left: 8%;
+    bottom: 9%;
+    width: 260px;
+    height: 170px;
+    background: rgba(251, 248, 243, 0.92);
+    padding: 28px;
+    border: 1px solid var(--line);
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+
+/* ============================================
+   MANIFESTO SECTION
+   ============================================ */
+.shipping-manifesto {
+    padding: 105px 8vw;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.manifesto-card {
+    border: 1px solid var(--line);
+    padding: 54px;
+    background: var(--paper);
+}
+
+.manifesto-card p {
+    font-size: 22px;
+    line-height: 1.55;
+    color: var(--ink);
+}
+
+.manifesto-image {
+    min-height: 620px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ============================================
+   ANATOMY SECTION
+   ============================================ */
+.shipping-anatomy {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 105px 8vw;
+}
+
+.shipping-anatomy .eyebrow,
+.shipping-anatomy h2,
+.shipping-anatomy p {
+    color: var(--cream);
+}
+
+.anatomy-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.anatomy-visual {
+    height: 720px;
+    position: relative;
+}
+
+.sheet {
+    position: absolute;
+    border: 1px solid rgba(244, 238, 228, 0.35);
+    background: rgba(244, 238, 228, 0.08);
+}
+
+.sheet.one {
+    width: 70%;
+    height: 44%;
+    left: 6%;
+    top: 8%;
+}
+
+.sheet.two {
+    width: 62%;
+    height: 38%;
+    right: 4%;
+    top: 32%;
+}
+
+.sheet.three {
+    width: 54%;
+    height: 30%;
+    left: 18%;
+    bottom: 8%;
+}
+
+.callout {
+    position: absolute;
+    color: var(--cream);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.c1 { left: 8%; top: 3%; }
+.c2 { right: 4%; top: 25%; }
+.c3 { left: 18%; bottom: 3%; }
+
+.anatomy-list {
+    border-top: 1px solid rgba(244, 238, 228, 0.26);
+}
+
+.anatomy-row {
+    border-bottom: 1px solid rgba(244, 238, 228, 0.26);
+    padding: 24px 0;
+}
+
+.anatomy-row h3 {
+    font-size: 25px;
+    color: var(--cream);
+    margin: 0 0 12px;
+}
+
+.anatomy-row p {
+    font-size: 15px;
+    margin: 0;
+    color: #d8cec4;
+}
+
+/* ============================================
+   TACTILE GRID
+   ============================================ */
+.shipping-tactile {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+}
+
+.tile {
+    min-height: 440px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 28px;
+}
+
+.tile span {
+    background: rgba(251, 248, 243, 0.86);
+    padding: 13px 16px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+/* ============================================
+   RECEIPT / WHAT WE CHOOSE SECTION
+   ============================================ */
+.shipping-receipt {
+    background: var(--cream);
+    padding: 105px 8vw;
+}
+
+.receipt-wrap {
+    max-width: 980px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.receipt-card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 44px;
+    font-family: Inter, sans-serif;
+}
+
+.receipt-line {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding: 17px 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.receipt-line strong {
+    color: var(--ink);
+    font-weight: 500;
+}
+
+/* ============================================
+   LARGE TEXT SECTION
+   ============================================ */
+.shipping-large-text {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 8vw;
+    background: var(--paper);
+}
+
+.shipping-large-text h2 {
+    font-size: 76px;
+    max-width: 980px;
+    margin: 0;
+}
+
+/* ============================================
+   GLOBAL SHIPPING SECTION (kept from original)
+   ============================================ */
+.shipping-global {
+    background-color: var(--ink);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    padding: 105px 8vw;
+}
+
+.shipping-global .eyebrow {
+    color: #a0a0a0;
+}
+
+.shipping-global p {
+    color: #cccccc;
+}
+
+.decorative-globe {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40rem;
+    color: rgba(255, 255, 255, 0.02);
+    pointer-events: none;
+}
+
+/* ============================================
+   TIMELINE SECTION (kept from original)
+   ============================================ */
+.shipping-timeline {
+    padding: 105px 8vw;
+    background: var(--bg-editorial);
+}
+
+.timeline-card {
+    border: 1px solid var(--border);
+    padding: 3rem 2rem;
+    background: #fff;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 0px var(--cream);
+}
+
+.timeline-icon {
+    font-size: 2rem;
+    color: var(--taupe);
+    margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   PATH / JOURNEY SECTION
+   ============================================ */
+.shipping-path {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+  
+}
+
+.path-step {
+    background: var(--cream);
+    padding: 48px 28px;
+    min-height: 280px;
+}
+
+.path-step .num {
+    font-family: "Work Sans", sans-serif;
+    font-size: 42px;
+    color: var(--taupe);
+    margin-bottom: 26px;
+}
+
+.path-step h3 {
+    font-size: 28px;
+    margin: 0 0 12px;
+}
+
+.path-step p {
+    font-size: 15px;
+    margin: 0;
+    color: var(--muted);
+}
+
+/* ============================================
+   FINAL SECTION
+   ============================================ */
+.shipping-final {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--cream);
+}
+
+.final-img {
+    min-height: 620px;
+    background-size: cover;
+    background-position: center;
+}
+
+.final-copy {
+    padding: 95px 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.shipping-button {
+    display: inline-block;
+    border: 1px solid var(--taupe);
+    padding: 15px 30px;
+    margin-top: 22px;
+    color: var(--ink);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    width: max-content;
+    transition: all 0.3s ease;
+}
+
+.shipping-button:hover {
+    background: var(--taupe);
+    color: var(--paper);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1100px) {
+    .shipping-hero h1 {
+        font-size: 60px;
+    }
+    
+    .shipping-hero,
+    .shipping-manifesto,
+    .anatomy-grid,
+    .receipt-wrap,
+    .shipping-final {
+        grid-template-columns: 1fr;
+    }
+    
+    .shipping-tactile,
+    .shipping-path {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .shipping-hero-stage {
+        min-height: 560px;
+    }
+    
+    .shipping-manifesto,
+    .shipping-anatomy,
+    .shipping-receipt,
+    .shipping-large-text,
+    .shipping-global,
+    .shipping-timeline {
+        padding: 72px 6vw;
+    }
+    
+    .manifesto-image,
+    .final-img {
+        min-height: 360px;
+    }
+    
+    .shipping-large-text h2 {
+        font-size: 46px;
+    }
+    
+    .anatomy-visual {
+        height: 520px;
+    }
+}
+
+@media (max-width: 768px) {
+    .shipping-hero-copy h1 {
+        font-size: 48px;
+    }
+    
+    .shipping-hero-copy p {
+        font-size: 16px;
+    }
+    
+    .manifesto-card p {
+        font-size: 18px;
+    }
+    
+    .shipping-large-text h2 {
+        font-size: 36px;
+    }
+    
+    .timeline-card {
+        margin-bottom: 20px;
+    }
+    
+    .path-step {
+        padding: 30px 20px;
+    }
+    
+    .path-step .num {
+        font-size: 32px;
+    }
+    
+    .path-step h3 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    .shipping-tactile,
+    .shipping-path {
+        grid-template-columns: 1fr;
+    }
+    
+    .shipping-hero-copy h1 {
+        font-size: 42px;
+    }
+    
+    .receipt-card {
+        padding: 28px;
+    }
+    
+    .final-copy {
+        padding: 60px 6vw;
+    }
+}

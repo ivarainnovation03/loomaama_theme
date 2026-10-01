@@ -1,0 +1,470 @@
+/* ============================================
+   SHIPPING & RETURNS PAGE SPECIFIC STYLES
+   ============================================ */
+
+:root {
+    --primary: #9E8574;
+    --cream: #F8F5EF;
+    --light: #F4EEE4;
+    --text: #1A1A1B;
+    --muted: #6F6761;
+    --line: #DED6CC;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ============================================
+   HERO SECTION WITH PARALLAX
+   ============================================ */
+.hero-shipping-returns {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.hero-shipping-returns .jarallax-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+.hero-shipping-returns::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(248, 245, 239, 0.85), rgba(248, 245, 239, 0.85));
+    z-index: 1;
+}
+
+.hero-shipping-returns-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 110px 7vw 90px;
+}
+
+.hero-shipping-returns-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.hero-shipping-returns-grid h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: clamp(48px, 7vw, 96px);
+    line-height: 0.95;
+    max-width: 850px;
+    margin-bottom: 32px;
+}
+
+.hero-shipping-returns-grid p {
+    max-width: 570px;
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.hero-shipping-returns-card {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(20px);
+    padding: 42px;
+    border: 1px solid rgba(158, 133, 116, 0.25);
+}
+
+.hero-shipping-returns-card h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.hero-shipping-returns-card p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: var(--text);
+    max-width: 100%;
+}
+
+/* ============================================
+   QUICK INFO SECTION
+   ============================================ */
+.quick-info-shipping {
+    padding: 40px 7vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    background: var(--light);
+}
+
+.quick-item {
+    padding: 16px 34px;
+    border-right: 1px solid var(--line);
+}
+
+.quick-item:last-child {
+    border-right: none;
+}
+
+.quick-item span {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.quick-item p {
+    font-size: 16px;
+    color: var(--text);
+}
+
+/* ============================================
+   GENERAL SECTION STYLES
+   ============================================ */
+.section-shipping {
+    padding: 100px 7vw;
+}
+
+.narrow-shipping {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.section-shipping h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: clamp(34px, 5vw, 62px);
+    line-height: 1.05;
+    margin-bottom: 28px;
+}
+
+.section-shipping p {
+    font-size: 17px;
+    color: var(--muted);
+    margin-bottom: 18px;
+    line-height: 1.65;
+}
+
+.divider-shipping {
+    height: 1px;
+    background: var(--line);
+    margin: 70px 0;
+}
+
+/* ============================================
+   POLICY GRID
+   ============================================ */
+.policy-grid-shipping {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 46px;
+}
+
+.policy-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 38px;
+}
+
+.policy-card h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 24px;
+}
+
+.policy-list {
+    list-style: none;
+}
+
+.policy-list li {
+    padding: 13px 0;
+    border-bottom: 1px solid #eee8df;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+.policy-list li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   PROCESS SECTION
+   ============================================ */
+.process-shipping {
+    background: var(--text);
+    color: var(--white);
+    padding: 110px 7vw;
+}
+
+.process-shipping .eyebrow {
+    color: var(--primary);
+}
+
+.process-shipping h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: clamp(36px, 5vw, 68px);
+    max-width: 780px;
+    margin-bottom: 70px;
+    color: var(--white);
+}
+
+.steps-shipping {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.step {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    padding-top: 28px;
+}
+
+.step span {
+    color: var(--primary);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.step h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin: 22px 0 16px;
+    color: var(--white);
+}
+
+.step p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+/* ============================================
+   IMAGE TEXT SECTION
+   ============================================ */
+.image-text-shipping {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.image-box {
+    min-height: 570px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.faq-shipping {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-top: 1px solid var(--line);
+    padding: 32px 0;
+}
+
+.faq-item:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.faq-item h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.faq-item p {
+    margin-bottom: 0;
+}
+
+/* ============================================
+   CONTACT SECTION
+   ============================================ */
+.contact-shipping {
+    text-align: center;
+    background: var(--light);
+    padding: 110px 7vw;
+}
+
+.contact-shipping h2 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: clamp(38px, 5vw, 72px);
+    margin-bottom: 24px;
+}
+
+.contact-shipping p {
+    max-width: 620px;
+    margin: 0 auto 36px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.button-shipping {
+    display: inline-block;
+    padding: 16px 32px;
+    border: 1px solid var(--primary);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+    background: transparent;
+}
+
+.button-shipping:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1100px) {
+    .hero-shipping-returns-grid,
+    .image-text-shipping,
+    .policy-grid-shipping,
+    .steps-shipping {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-info-shipping {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-item {
+        border-right: none;
+        border-bottom: 1px solid var(--line);
+        padding: 16px 0;
+    }
+
+    .quick-item:last-child {
+        border-bottom: none;
+    }
+
+    .hero-shipping-returns {
+        min-height: auto;
+    }
+
+    .hero-shipping-returns-content {
+        padding-top: 80px;
+    }
+
+    .section-shipping,
+    .process-shipping,
+    .contact-shipping {
+        padding: 72px 6vw;
+    }
+
+    .hero-shipping-returns-card {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-shipping-returns-grid h1 {
+        font-size: 42px;
+    }
+
+    .hero-shipping-returns-grid p {
+        font-size: 16px;
+    }
+
+    .step {
+        margin-bottom: 30px;
+    }
+
+    .step h3 {
+        font-size: 20px;
+    }
+
+    .policy-card {
+        padding: 28px;
+    }
+
+    .policy-card h3 {
+        font-size: 22px;
+    }
+
+    .faq-item h3 {
+        font-size: 20px;
+    }
+
+    .image-box {
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-shipping-returns-grid h1 {
+        font-size: 36px;
+    }
+
+    .hero-shipping-returns-card {
+        padding: 28px;
+    }
+
+    .hero-shipping-returns-card h3 {
+        font-size: 20px;
+    }
+
+    .section-shipping h2,
+    .process-shipping h2,
+    .contact-shipping h2 {
+        font-size: 32px;
+    }
+
+    .policy-card {
+        padding: 20px;
+    }
+
+    .image-box {
+        min-height: 300px;
+    }
+}

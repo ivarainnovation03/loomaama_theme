@@ -1,0 +1,296 @@
+/* ============================================
+   FOREST (MATERIALS) PAGE SPECIFIC STYLES
+   ============================================ */
+
+:root {
+    --bg-editorial: #F7F3EE;
+    --wild-nettle: #8A9A86;
+    --hemp-earth: #A69177;
+    --border: #E5E5E5;
+    --text-main: #1A1A1A;
+}
+
+/* Hero Section */
+.hero-editorial {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-editorial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+
+.hero-editorial-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Stat Callout */
+.stat-callout {
+    border: 1px solid var(--border);
+    padding: 3rem;
+    background: #fff;
+    position: relative;
+    box-shadow: 10px 10px 0px var(--bg-editorial);
+}
+
+.stat-callout p {
+    font-family: 'Work Sans', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin: 0;
+}
+
+/* Collage Grid */
+.collage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 15px;
+}
+
+.collage-main {
+    grid-column: 1 / -1;
+    height: 400px;
+}
+
+.collage-sub {
+    height: 250px;
+}
+
+.collage-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Benefits List */
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.benefits-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.benefits-list li::before {
+    content:  '\2666';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--wild-nettle);
+    font-size: 0.9rem;
+}
+
+/* Lifecycle Diagram */
+.lifecycle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.lifecycle-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+.lifecycle-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--bg-editorial);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.lifecycle-step:hover .lifecycle-icon {
+    background: var(--text-main);
+    color: #fff;
+    border-color: var(--text-main);
+}
+
+.lifecycle-arrow {
+    color: var(--border);
+    font-size: 1.2rem;
+}
+
+/* Background Utilities */
+.bg-editorial {
+    background: var(--bg-editorial);
+}
+
+.bg-white {
+    background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-editorial {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 2rem;
+    }
+    
+    .stat-callout {
+        padding: 2rem;
+    }
+    
+    .stat-callout p {
+        font-size: 1.25rem;
+    }
+    
+    .collage-main {
+        height: 300px;
+    }
+    
+    .collage-sub {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-editorial {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .stat-callout {
+        padding: 1.5rem;
+    }
+    
+    .stat-callout p {
+        font-size: 1rem;
+    }
+    
+    .collage-main {
+        height: 250px;
+    }
+    
+    .collage-sub {
+        height: 150px;
+    }
+    
+    .collage-grid {
+        gap: 10px;
+    }
+    
+    .lifecycle-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+    
+    .lifecycle-container {
+        flex-direction: column;
+    }
+    
+    .lifecycle-step {
+        width: 100px;
+    }
+    
+    .lifecycle-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-editorial {
+        height: 80vh;
+        min-height: 350px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stat-callout {
+        padding: 1rem;
+    }
+    
+    .stat-callout p {
+        font-size: 0.9rem;
+    }
+    
+    .collage-main {
+        height: 200px;
+    }
+    
+    .collage-sub {
+        height: 120px;
+    }
+    
+    .benefits-list {
+        margin: 1rem 0;
+    }
+    
+    .benefits-list li {
+        padding-left: 1.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .lifecycle-step {
+        width: 80px;
+    }
+    
+    .lifecycle-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .lifecycle-step span {
+        font-size: 0.7rem;
+    }
+}

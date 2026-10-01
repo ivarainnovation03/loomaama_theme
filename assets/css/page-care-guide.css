@@ -1,0 +1,350 @@
+/* ============================================
+   CARE GUIDE PAGE SPECIFIC STYLES
+   Refined from LOOMAAMA care page preview
+   ============================================ */
+
+/* Base variables matching the preview design */
+:root {
+    --bg: #F4EEE4;
+    --bg2: #FBF8F3;
+    --primary: #9E8574;
+    --text: #1a1a1b;
+    --muted: #6f625a;
+    --line: rgba(158, 133, 116, 0.28);
+}
+
+/* Hero Section - Editorial Style */
+/* Hero Section - Split Layout */
+.hero-editorial {
+    min-height: 86vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--bg);
+    position: relative;
+    padding-bottom:0px;
+}
+
+.hero-editorial-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 10vw;
+    background: var(--bg);
+    color: var(--text);
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    text-align: left;
+}
+
+.hero-editorial-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-editorial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.hero-editorial-content .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 28px;
+}
+
+.hero-editorial-content h1 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 72px;
+    line-height: 0.94;
+    margin: 0 0 34px;
+}
+
+.hero-editorial-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--muted);
+    max-width: 520px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-editorial {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .hero-editorial-content {
+        padding: 70px 7vw;
+    }
+    
+    .hero-editorial-image {
+        min-height: 400px;
+        order: -1;
+    }
+    
+    .hero-editorial-image img {
+        position: relative;
+        height: 400px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-editorial-content h1 {
+        font-size: 42px;
+    }
+    
+    .hero-editorial-content p {
+        font-size: 16px;
+    }
+    
+    .hero-editorial-image {
+        min-height: 300px;
+    }
+    
+    .hero-editorial-image img {
+        height: 300px;
+    }
+}
+/* General Section Styles */
+.section {
+    padding: 110px 9vw;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.image-card {
+    min-height: 540px;
+    background-size: cover;
+    background-position: center;
+}
+
+.content-block {
+    max-width: 520px;
+}
+
+.content-block h2,
+.center h2 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 42px;
+    margin: 0 0 22px;
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 34px;
+}
+
+.steps {
+    border-top: 1px solid var(--line);
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 54px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.num {
+    color: var(--primary);
+    font-size: 13px;
+    letter-spacing: 0.16em;
+}
+
+.full {
+    background: var(--bg);
+}
+
+.full-image {
+    min-height: 520px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 44px;
+}
+
+.two-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+}
+
+.card {
+    background: var(--bg2);
+    padding: 70px;
+    min-height: 310px;
+}
+
+.card h2 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 34px;
+    margin: 0 0 18px;
+}
+
+.card p {
+    color: var(--muted);
+    line-height: 1.8;
+}
+
+.notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.note-box h3 {
+    font-family: "Work Sans", sans-serif;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.note-box div {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+}
+
+.cta {
+    text-align: center;
+    background: var(--bg);
+    padding: 120px 9vw;
+}
+
+.cta h2 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 52px;
+    margin: 0 0 22px;
+}
+
+.cta p {
+    max-width: 620px;
+    margin: 0 auto 38px;
+    color: var(--muted);
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+    border: 1px solid var(--primary);
+    color: var(--text);
+    padding: 15px 30px;
+    text-decoration: none;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 12px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: var(--primary);
+    color: var(--bg2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .hero-editorial {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .hero-editorial-content {
+        padding: 70px 7vw;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 52px;
+    }
+    
+    .split,
+    .two-card,
+    .notes {
+        grid-template-columns: 1fr;
+    }
+    
+    .section {
+        padding: 70px 7vw;
+    }
+    
+    .image-card {
+        min-height: 360px;
+    }
+    
+    .card {
+        padding: 50px 30px;
+    }
+    
+    .cta h2 {
+        font-size: 42px;
+    }
+    
+    .notes {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-editorial-content h1 {
+        font-size: 42px;
+    }
+    
+    .hero-editorial-content p {
+        font-size: 16px;
+    }
+    
+    .content-block h2,
+    .center h2,
+    .card h2 {
+        font-size: 32px;
+    }
+    
+    .step {
+        grid-template-columns: 40px 1fr;
+        gap: 12px;
+    }
+    
+    .cta {
+        padding: 80px 7vw;
+    }
+    
+    .cta h2 {
+        font-size: 36px;
+    }
+}

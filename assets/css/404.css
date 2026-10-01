@@ -1,0 +1,677 @@
+/* 404 Page Styles
+============================================ */
+
+.error-404 {
+    text-align: center;
+    padding: 80px 20px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAF9F7;
+}
+
+.error-404 .error-content {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* 404 Number */
+.error-404 .error-number {
+    font-size: 180px;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #8B7355 0%, #C2B29F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Error Title */
+.error-404 .error-title {
+    font-size: 32px;
+    font-weight: 500;
+    color: #2C2C2C;
+    margin-bottom: 20px;
+    font-family: 'Work Sans', sans-serif;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+/* Error Message */
+.error-404 .error-message {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* ============================================
+   SEARCH FORM - INPUT & BUTTON STYLES
+   ============================================ */
+
+.error-404 .search-form {
+    margin: 30px auto;
+    position: relative;
+    max-width: 450px;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+/* Search Input Wrapper */
+.error-404 .search-form .search-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Search Input Field */
+.error-404 .search-form .search-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    border: 2px solid #E8E5DF;
+    border-radius: 50px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    background: #FFFFFF;
+    color: #2C2C2C;
+    outline: none;
+}
+
+/* Input Placeholder */
+.error-404 .search-form .search-input::placeholder {
+    color: #B8B8B8;
+    font-size: 14px;
+}
+
+/* Input Focus State */
+.error-404 .search-form .search-input:focus {
+    border-color: #C2B29F;
+    box-shadow: 0 0 0 4px rgba(194, 178, 159, 0.1);
+    outline: none;
+}
+
+/* Input Hover State */
+.error-404 .search-form .search-input:hover {
+    border-color: #C2B29F;
+}
+
+/* Search Button */
+.error-404 .search-form .search-button {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #8B7355;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Search Button Hover */
+.error-404 .search-form .search-button:hover {
+    background: #6B5740;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+}
+
+/* Search Button Active */
+.error-404 .search-form .search-button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+/* ============================================
+   HOME BUTTON STYLES
+   ============================================ */
+
+/* Primary Home Button */
+.error-404 .home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #8B7355;
+    color: #FFFFFF;
+    padding: 12px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+/* Home Button Hover */
+.error-404 .home-button:hover {
+    background: #6B5740;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.3);
+    text-decoration: none;
+}
+
+/* Home Button Active */
+.error-404 .home-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(139, 115, 85, 0.2);
+}
+
+/* Home Button Icon */
+.error-404 .home-button i {
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.error-404 .home-button:hover i {
+    transform: translateX(-4px);
+}
+
+/* ============================================
+   SECONDARY BUTTONS (Category & Help Links)
+   ============================================ */
+
+/* Category Links (as buttons) */
+.error-404 .category-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    background: #F5F3EF;
+    color: #5C4B3A;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.error-404 .category-link:hover {
+    background: #8B7355;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    text-decoration: none;
+    border-color: #8B7355;
+}
+
+.error-404 .category-link:active {
+    transform: translateY(0);
+}
+
+/* Help Links (as text buttons) */
+.error-404 .help-link {
+    color: #8B7355;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.error-404 .help-link:hover {
+    color: #5C4B3A;
+    background: #F5F3EF;
+    border-color: #E8E5DF;
+    text-decoration: none;
+    transform: translateX(4px);
+}
+
+.error-404 .help-link i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.error-404 .help-link:hover i {
+    transform: translateX(2px);
+}
+
+/* ============================================
+   ALTERNATIVE BUTTON VARIANTS
+   ============================================ */
+
+/* Outline Button Variant */
+.error-404 .home-button-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: #8B7355;
+    padding: 12px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #8B7355;
+    cursor: pointer;
+}
+
+.error-404 .home-button-outline:hover {
+    background: #8B7355;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 115, 85, 0.2);
+}
+
+/* Small Button Variant */
+.error-404 .small-button {
+    padding: 6px 16px;
+    font-size: 12px;
+}
+
+/* Large Button Variant */
+.error-404 .large-button {
+    padding: 16px 40px;
+    font-size: 18px;
+}
+
+/* Disabled Button State */
+.error-404 .button-disabled,
+.error-404 .button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* ============================================
+   INPUT GROUP WITH BUTTON (Alternative Layout)
+   ============================================ */
+
+.error-404 .input-group {
+    display: flex;
+    gap: 10px;
+    max-width: 450px;
+    margin: 30px auto;
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.error-404 .input-group .search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #E8E5DF;
+    border-radius: 50px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: #FFFFFF;
+}
+
+.error-404 .input-group .search-input:focus {
+    border-color: #C2B29F;
+    box-shadow: 0 0 0 4px rgba(194, 178, 159, 0.1);
+    outline: none;
+}
+
+.error-404 .input-group .search-button {
+    background: #8B7355;
+    color: #FFFFFF;
+    border: none;
+    padding: 0 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.error-404 .input-group .search-button:hover {
+    background: #6B5740;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 115, 85, 0.3);
+}
+
+/* ============================================
+   POPULAR SECTIONS
+   ============================================ */
+
+.error-404 .popular-sections {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid #E8E5DF;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+}
+
+.error-404 .popular-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #2C2C2C;
+    margin-bottom: 25px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.error-404 .categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.error-404 .help-links {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ============================================
+   ILLUSTRATION
+   ============================================ */
+
+.error-404 .error-illustration {
+    margin-bottom: 30px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.error-404 .error-illustration svg {
+    max-width: 200px;
+    height: auto;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Input Error Animation */
+.error-404 .search-form .search-input.error {
+    animation: shake 0.3s ease-in-out;
+    border-color: #dc3545;
+    background-color: #fff8f8;
+}
+
+.error-404 .search-form .search-input.error:focus {
+    border-color: #dc3545;
+    box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.1);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .error-404 {
+        padding: 50px 20px;
+        min-height: 50vh;
+    }
+    
+    .error-404 .error-number {
+        font-size: 120px;
+    }
+    
+    .error-404 .error-title {
+        font-size: 24px;
+    }
+    
+    .error-404 .error-message {
+        font-size: 16px;
+    }
+    
+    /* Responsive Input & Button */
+    .error-404 .search-form .search-input {
+        padding: 12px 45px 12px 15px;
+        font-size: 14px;
+    }
+    
+    .error-404 .search-form .search-button {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        right: 6px;
+    }
+    
+    .error-404 .home-button {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+    
+    .error-404 .input-group .search-input {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+    
+    .error-404 .input-group .search-button {
+        padding: 0 20px;
+        font-size: 14px;
+    }
+    
+    .error-404 .categories-grid {
+        gap: 10px;
+    }
+    
+    .error-404 .category-link {
+        padding: 6px 15px;
+        font-size: 12px;
+    }
+    
+    .error-404 .help-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-404 .error-number {
+        font-size: 80px;
+    }
+    
+    .error-404 .error-title {
+        font-size: 20px;
+    }
+    
+    /* Mobile Input & Button */
+    .error-404 .search-form {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .error-404 .search-form .search-input {
+        padding: 10px 40px 10px 12px;
+        font-size: 13px;
+    }
+    
+    .error-404 .search-form .search-button {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+        right: 4px;
+    }
+    
+    .error-404 .home-button {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+    
+    .error-404 .input-group {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .error-404 .input-group .search-button {
+        padding: 10px 20px;
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    .error-404 {
+        background: #1a1a1a;
+    }
+    
+    .error-404 .error-title {
+        color: #FFFFFF;
+    }
+    
+    .error-404 .error-message {
+        color: #AAAAAA;
+    }
+    
+    /* Dark Mode Input */
+    .error-404 .search-form .search-input {
+        background: #2C2C2C;
+        border-color: #444444;
+        color: #FFFFFF;
+    }
+    
+    .error-404 .search-form .search-input::placeholder {
+        color: #888888;
+    }
+    
+    .error-404 .search-form .search-input:focus {
+        border-color: #C2B29F;
+        box-shadow: 0 0 0 4px rgba(194, 178, 159, 0.2);
+    }
+    
+    /* Dark Mode Category Buttons */
+    .error-404 .category-link {
+        background: #2C2C2C;
+        color: #C2B29F;
+    }
+    
+    .error-404 .category-link:hover {
+        background: #8B7355;
+        color: #FFFFFF;
+    }
+    
+    /* Dark Mode Help Links */
+    .error-404 .help-link {
+        color: #C2B29F;
+    }
+    
+    .error-404 .help-link:hover {
+        background: #2C2C2C;
+        color: #FFFFFF;
+    }
+    
+    /* Dark Mode Popular Section Border */
+    .error-404 .popular-sections {
+        border-top-color: #333333;
+    }
+    
+    .error-404 .popular-title {
+        color: #FFFFFF;
+    }
+}
+
+/* Optional: Add these styles for better form validation */
+
+/* Success State */
+.error-404 .search-form .search-input.success {
+    border-color: #28a745;
+}
+
+.error-404 .search-form .search-input.success:focus {
+    box-shadow: 0 0 0 4px rgba(40, 167, 69, 0.1);
+}
+
+/* Warning State */
+.error-404 .search-form .search-input.warning {
+    border-color: #ffc107;
+}
+
+/* Loading State for Buttons */
+.error-404 .home-button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.error-404 .home-button.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Focus Visible for Accessibility */
+.error-404 .search-form .search-input:focus-visible,
+.error-404 .home-button:focus-visible,
+.error-404 .category-link:focus-visible {
+    outline: 2px solid #8B7355;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .error-404 .search-form .search-input {
+        border-width: 3px;
+    }
+    
+    .error-404 .home-button {
+        border: 2px solid #FFFFFF;
+    }
+}

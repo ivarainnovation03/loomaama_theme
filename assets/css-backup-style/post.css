@@ -1,0 +1,297 @@
+/* Additional custom styles that complement Bootstrap */
+.tracking-wide {
+    letter-spacing: 0.12em;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.transition-scale {
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.transition-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Read More Link */
+.read-more {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--brand);
+    transition: width 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--brand) !important;
+}
+
+.read-more:hover::after {
+    width: 100%;
+}
+
+/* Single Post Styles */
+.single-title {
+    letter-spacing: 0.05em;
+}
+
+.single-excerpt {
+    line-height: 1.6;
+}
+
+/* Author Section */
+.author-name {
+    letter-spacing: 0.1em;
+}
+
+/* Post Content Styling */
+.single-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.single-content h2 {
+    font-size: 2rem;
+    margin: 2.5rem 0 1rem;
+    font-family: var(--font-headline);
+    letter-spacing: 0.05em;
+}
+
+.single-content h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+    font-family: var(--font-headline);
+    letter-spacing: 0.05em;
+}
+
+.single-content h4 {
+    font-size: 1.25rem;
+    margin: 1.5rem 0 0.75rem;
+    font-family: var(--font-headline);
+}
+
+.single-content p {
+    margin-bottom: 1.5em;
+}
+
+.single-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem 0;
+}
+
+.single-content blockquote {
+    margin: 2rem 0;
+    padding: 1.5rem 2rem;
+    border-left: 3px solid var(--brand);
+    background: var(--bg-editorial);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.single-content ul,
+.single-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.single-content li {
+    margin-bottom: 0.5rem;
+}
+
+/* Tag Links Hover */
+.tag-link:hover {
+    background: var(--brand) !important;
+    border-color: var(--brand) !important;
+    color: white !important;
+}
+
+/* Post Navigation Links */
+.post-navigation a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+    font-family: var(--font-headline);
+    letter-spacing: 0.05em;
+}
+
+.post-navigation a:hover {
+    color: var(--brand);
+}
+
+/* Related Posts */
+.related-item {
+    transition: transform 0.3s ease;
+}
+
+.related-item:hover {
+    transform: translateY(-5px);
+}
+
+.related-post-title a:hover {
+    color: var(--brand) !important;
+}
+
+/* Newsletter Block Background */
+.bg-editorial {
+    background-color: var(--bg-editorial);
+    border: 1px solid var(--border);
+}
+
+/* Comments Styling - Override WordPress defaults */
+.comments-section .comments-title {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+}
+
+.comments-section .comment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comments-section .comment {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.comments-section .comment-author {
+    font-weight: 600;
+}
+
+.comments-section .comment-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.comments-section .comment-content {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.comments-section .reply {
+    margin-top: 0.5rem;
+}
+
+.comments-section .reply a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: var(--brand);
+}
+
+/* Comment Form */
+.comments-section .comment-respond {
+    margin-top: 2rem;
+}
+
+.comments-section .comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comments-section .comment-form input,
+.comments-section .comment-form textarea {
+    border: 1px solid var(--border);
+    padding: 0.75rem;
+}
+
+.comments-section .comment-form input:focus,
+.comments-section .comment-form textarea:focus {
+    outline: none;
+    border-color: var(--brand);
+}
+
+.comments-section .form-submit {
+    margin-top: 1rem;
+}
+
+.comments-section .submit {
+    background: var(--brand);
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-family: var(--font-headline);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.comments-section .submit:hover {
+    background: var(--brand-hover);
+}
+#commentform input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+}
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .single-title {
+        font-size: 2.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .single-title {
+        font-size: 1.75rem !important;
+    }
+    
+    .single-excerpt {
+        font-size: 1rem !important;
+    }
+    
+    .single-author {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .author-info {
+        text-align: center;
+    }
+    
+    .post-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-previous,
+    .nav-next {
+        text-align: center !important;
+    }
+    
+    .single-content {
+        font-size: 1rem;
+    }
+    
+    .single-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .single-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    .single-tags {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,945 @@
+/* ============================= */
+/* PRODUCT SINGLE PAGE           */
+/* ============================= */
+/* Force hover images to render properly with Lightspeed Cache */
+img[data-hover-image] {
+    transition: opacity 0.2s ease;
+    will-change: opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+img[data-hover-image].hover-loading {
+    opacity: 0.8 !important;
+}
+
+/* Prevent Lightspeed from interfering */
+img[data-hover-image][src*="hover"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Add hover effect for product images touch */
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* For touch devices - ensure overlays work properly */
+    .lux-img {
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    }
+    
+    .hover-overlay-img {
+        transition: opacity 0.2s ease, transform 0.6s ease;
+        will-change: opacity, transform;
+    }
+    
+    /* Prevent text selection on double tap */
+    .lux-img * {
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+    
+    /* Ensure overlay doesn't block clicks when hidden */
+    .hover-overlay-img {
+        pointer-events: none;
+    }
+    
+    /* When active, allow pointer events? No - we want clicks to go to link */
+    .lux-img.hover-active .hover-overlay-img {
+        pointer-events: none;
+    }
+}
+
+/* Desktop hover effects */
+@media (hover: hover) and (pointer: fine) {
+    .lux-img:hover .hover-overlay-img {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+    
+    .lux-img:hover img:first-child {
+        transform: scale(1.06);
+    }
+}
+
+/* Base styles for both desktop and touch */
+.lux-img {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.lux-img img:first-child,
+.hover-overlay-img {
+    transition: opacity 0.3s ease, transform 0.6s ease;
+    will-change: transform, opacity;
+}
+
+.lux-img img:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.hover-overlay-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none; /* Allows clicking through to the link */
+}
+
+/* Badges should stay above everything */
+.lux-img .badge-sale,
+.lux-img .badge-best,
+.lux-img .badge-soldout {
+    z-index: 3;
+    position: absolute;
+}
+
+/* Active state for touch devices */
+.lux-img.hover-active .hover-overlay-img {
+    opacity: 1;
+    transform: scale(1.06);
+}
+
+.lux-img.hover-active img:first-child {
+    transform: scale(1.06);
+}
+
+/* For product cards in grid */
+.product-masonry .lux-img,
+.related-slider .lux-img {
+    overflow: hidden;
+}
+
+/* Ensure product images maintain proper aspect ratio */
+.lux-img {
+    position: relative;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.lux-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease, opacity 0.15s ease;
+}
+
+.lux-card:hover .lux-img img {
+    transform: scale(1.06);
+}
+
+.hover-overlay-img{
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.3s ease; z-index: 2;
+}
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-gallery-wrap {
+  flex: 1 1 45%;
+}
+
+.product-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.product-gallery.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0px;
+  width: 100%;
+}
+
+.product-gallery.grid a {
+  display: block;
+  width: 100%;
+}
+
+.product-gallery.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-gallery.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.product-gallery.carousel a {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+@media (max-width: 1024px) {
+  .product-gallery-wrap {
+    flex: 1 1 50%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background: var(--bg-main);
+    height: auto;
+    flex-direction: column;
+  }
+
+  .product-gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product-gallery a {
+    flex: 0 0 90%;
+    width: 90%;
+    height: 100%;
+    scroll-snap-align: start;
+  }
+
+  .product-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.product-info {
+  flex: 1 1 40%;
+  padding: 31px 6% 7%;
+  position: sticky;
+  top: var(--nav-height);
+  height: calc(100vh - var(--nav-height));
+  overflow-y: auto;
+  border-left: 1px solid var(--border);
+  background: var(--bg-main);
+  scrollbar-width: none;
+}
+
+.breadcrumb {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.product-title {
+  font-family: var(--font-headline);
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.product-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.label-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.swatch.active::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 1px solid var(--text-primary);
+  border-radius: 50%;
+}
+
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.size-option {
+  border: 1px solid var(--border);
+  padding: 12px 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.size-option:hover {
+  border-color: var(--text-primary);
+}
+
+.size-option.active {
+  background: var(--text-primary);
+  color: #fff;
+  border-color: var(--text-primary);
+}
+
+.size-option.disabled {
+  color: var(--border);
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.btn-add-to-cart {
+  width: 100%;
+  padding: 20px;
+  background: var(--brand);
+  color: var(--text-btn);
+  border: none;
+  font-family: var(--font-headline);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: opacity 0.3s;
+}
+
+.btn-add-to-cart:hover {
+  opacity: 0.9;
+}
+
+.details-accordion {
+  margin-top: 50px;
+  border-top: 1px solid var(--border);
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.accordion-header {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 500px;
+  padding-bottom: 20px;
+}
+
+.accordion-item.active .fa-plus {
+  transform: rotate(45deg);
+}
+
+@media (min-width: 992px) and (max-width: 1199.99px) {
+  .product-info {
+    flex: 3 1 40%;
+  }
+}
+
+@media (max-width: 991px) {
+  .product-info {
+    position: static;
+    height: auto;
+    padding: 40px 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .product-container {
+    flex-direction: column;
+  }
+
+  .product-info {
+    padding: 30px 15%;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-info {
+    padding: 40px 5%;
+  }
+}
+
+.gallery-indicators .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-indicators .dot.active {
+  background: #000;
+}
+
+@media (max-width: 991px) {
+    #productGallery {
+        display: flex !important;
+        overflow-x: auto !important;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        gap: 0;
+    }
+
+    #productGallery > a {
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+        display: block;
+    }
+
+    #productGallery img, 
+    #productGallery video {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #productGallery::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #product-container {
+      flex-direction: column;
+    }
+    
+    #product-container .gallery-indicators {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 0;
+      background: var(--bg-main);
+    }
+}
+
+#product-container .gallery-indicators { display: none;}
+
+.gallery-nav {
+  display: none;
+}
+
+@media screen and (min-width:992px) {
+  .gallery-nav {
+  display: none !important;
+}
+}
+@media screen and (max-width:1024px) {
+  .gallery-nav {
+    display: none;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
+    position:absolute;
+    top: 38%;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .nav-btn {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-btn:hover {
+    background: #e2e6ea;
+  }
+}
+
+@media screen and (max-width: 992px) {
+    .gallery-nav {
+        top: 46%;
+        padding:0 25px;
+       
+    }
+}
+
+.product-gallery figure{margin: 0;}
+.product-gallery video{width: 100%;}
+
+/* Color and Size Pills */
+.color-section{  
+   margin-bottom: 15px;
+    align-items: center;
+}
+.color-pill{
+  text-indent: -999px;
+  font-size: 0px;
+  height:28px;
+  width:28px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.color-pills{ margin:0 !important; }
+.color-pills span:first-child,.size-pills span:first-child{
+  min-width: 120px;
+}
+.color-pills, .size-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.color-pill, .size-pill {
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease;
+}
+
+.size-pill:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.color-pill:hover:not(:disabled),
+.size-pill:hover:not(:disabled) {
+    transform: scale(1.05);
+}
+.size-pill{ min-width: 55px;}
+
+.color-pill.active,
+.size-pill.active {
+    background: #000;
+    color: #fff;
+    border-color: var(--brand);
+}
+
+.color-pill.disabled,
+.size-pill.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.size-pills-placeholder {
+    padding: 8px 0;
+    color: #999;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* Pattern Pills Styling */
+.pattern-pill {
+    transition: all 0.2s ease;
+}
+
+.pattern-pill:hover .pattern-image-wrapper {
+    border-color: var(--card);
+        
+    transform: scale(1.05);
+}
+
+.pattern-pill.active .pattern-image-wrapper {
+    border-color:var(--brand) !important;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--border)
+}
+
+.pattern-pill.active .pattern-name {
+    color: #332bac;
+}
+.pattern-pill-disabled:hover .pattern-image-wrapper{
+    transform:none;
+    opacity:0.8;
+}
+.pattern-pill:not(.active):hover{
+    border:0px !important;
+}
+/* Pattern Grid Layout */
+
+.pattern-image-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #e5e5e5;
+    margin-bottom: 8px;
+}
+
+.pattern-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pattern-pill-disabled .pattern-pill {
+    padding: 3px !important
+}
+
+.quantity-section {
+    margin: 20px 0;
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    width: fit-content;
+    margin-top: 8px;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.quantity-btn:hover:not(:disabled) {
+    background-color: #f5f5f5;
+}
+
+.quantity-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.quantity-input {
+    width: 60px;
+    height: 40px;
+    border: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    font-size: 14px;
+    -moz-appearance: textfield;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.add-to-cart-btn {
+    width: 100%;
+    padding: 15px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+    margin: 20px 0 10px;
+}
+
+.add-to-cart-btn:hover {
+    background: #333;
+}
+
+.add-to-cart-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.selected-color, .selected-size,.selected-pattern {
+    color: #000;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.label-title {
+    font-size: 11px;
+    color:var(--text-primary);
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 0.2em;
+}
+
+.add-to-cart-btn.loading {
+    position: relative;
+    color: transparent;
+}
+
+.add-to-cart-btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+    border: 2px solid #fff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+    to { transform: rotate(360deg); }
+}
+
+/* Pattern pills backup for text under the pattern */
+/*
+.pattern-pill {
+    padding: 8px 16px;
+    min-width: 55px;
+    border:none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+}
+*/
+.pattern-pill {
+    border:none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+}
+.pattern-pill:hover:not(:disabled) {
+    border-color: var(--brand-hover);
+}
+
+.pattern-pill.active {
+ 
+    color: white;
+    border-color: var(--brand);
+}
+
+.pattern-pill.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.pattern-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    
+    /* For Firefox */
+    scrollbar-width: none;
+}
+.pattern-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+.pattern-pill.active .pattern-thumbnail {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px var(--border);
+}
+
+.pattern-thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--border, var(--brand-hover));
+    transition: all 0.2s ease;
+}
+
+.pattern-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pattern-name {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary, #666);
+    text-transform: uppercase;
+}
+
+.pattern-pill:hover .pattern-thumbnail {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+.color-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin-top: 8px;
+    padding-left:4px;
+}
+
+.color-pill {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-indent: -9999px;
+    overflow: hidden;
+    border: 2px solid var(--border, #ddd);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.color-pill.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--border);
+    transform: scale(1.05);
+}
+
+.color-pill:hover:not(.active) {
+    transform: scale(1.05);
+    opacity: 0.85;
+}
+
+.color-pill.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    filter: grayscale(0.2);
+    pointer-events: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.color-pill.disabled::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.6);
+    transform: rotate(-45deg);
+}
+
+/* WooCommerce Overrides */
+.woocommerce div.product form.cart {
+  margin-top: 2em;
+}
+
+.woocommerce div.product form.cart .variations {
+  margin-bottom: 2em;
+}
+
+.woocommerce div.product form.cart .variations td.label {
+  padding-right: 1em;
+}
+
+.woocommerce div.product form.cart .variations select {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--bg-main);
+  font-family: var(--font-body);
+}
+
+.woocommerce div.product form.cart .reset_variations {
+  display: none !important;
+}
+
+.woocommerce-variation-price {
+  margin: 20px 0;
+}
+
+.woocommerce-variation-price .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.woocommerce-variation-availability {
+  margin: 10px 0;
+}
+
+.stock.out-of-stock {
+  color: #c94f4f;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.woocommerce .quantity .qty {
+  padding: 15px;
+  width: 100px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+}
+
+.single_add_to_cart_button {
+  width: calc(100% - 120px) !important;
+  padding: 16px !important;
+  background: var(--brand) !important;
+  color: white !important;
+  border: none !important;
+  font-family: var(--font-headline) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  border-radius: 0 !important;
+}
+
+.single_add_to_cart_button:hover {
+  background: var(--brand-hover) !important;
+  opacity: 0.9;
+}

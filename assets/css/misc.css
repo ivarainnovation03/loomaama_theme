@@ -1,0 +1,613 @@
+/* ============================= */
+/* CAROUSELS                     */
+/* ============================= */
+
+.swiper-pagination-bullet-active {
+  background: var(--brand) !important;
+}
+
+.btn-arrival-prev,
+.btn-arrival-next,
+.btn-featured-prev,
+.btn-featured-next,
+.btn-related-prev,
+.btn-related-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--brand);
+  background: transparent;
+  color: var(--brand);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-arrival-prev:hover,
+.btn-arrival-next:hover,
+.btn-featured-prev:hover,
+.btn-featured-next:hover,
+.btn-related-prev:hover,
+.btn-related-next:hover {
+  background: var(--brand);
+  color: var(--text-btn);
+}
+
+/* ============================= */
+/* EDITORIAL / SUSTAINABILITY    */
+/* ============================= */
+
+.editorial-section {
+  background-color: var(--bg-card);
+  padding: 10rem 2rem;
+  text-align: center;
+}
+
+.editorial-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+section:first-child{padding-top: 0px;}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: var(--font-headline);
+  font-weight: 500;
+}
+
+.editorial-title {
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.editorial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--bg-editorial);
+  border: 1px solid var(--border);
+  width: 100%;
+}
+
+/* ============================= */
+/* SIZE GUIDE DRAWER             */
+/* ============================= */
+
+.size-guide-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 480px;
+      max-width: 100%;
+      background: var(--bg-main);
+      transform: translateX(100%);
+      transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+      z-index: 3000;
+      padding: 80px 40px;
+      overflow-y: auto;
+      box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .size-guide-drawer.active {
+      transform: translateX(0);
+    }
+    .opensizeguide{
+      font-size: 9px; color: var(--text-secondary); text-decoration: underline; border: none;padding:0; float:right; cursor:pointer;}
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--text-primary);
+      padding: 0;
+      line-height: 1;
+    }
+
+    .size-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .size-table th, .size-table td {
+      text-align: left;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+    }
+
+    .size-table th {
+      color: var(--text-primary);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .size-table td {
+      color: var(--text-secondary);
+    }
+
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(2px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s;
+      z-index: 2500;
+    }
+
+    body.drawer-open {
+      overflow: hidden;
+    }
+
+    body.drawer-open .drawer-overlay {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+      @media (max-width: 991px) {
+      .size-guide-drawer { width: 100%; padding: 60px 25px; }
+    }
+
+/* ============================= */
+/* MY ACCOUNT PAGE STYLES        */
+/* ============================= */
+
+.my-account-page {
+    background: var(--bg-main);
+}
+
+.account-sidebar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+}
+
+.account-nav-link {
+    display: block;
+    padding: 12px 15px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-family: var(--font-body);
+}
+
+.account-nav-link:hover,
+.account-nav-link.active {
+    color: var(--brand);
+    background: rgba(158, 133, 116, 0.05);
+    padding-left: 25px;
+}
+
+.account-nav-link i {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.account-content {
+    background: white;
+    border: 1px solid var(--border);
+    min-height: 500px;
+}
+
+.account-content h2 {
+    font-family: var(--font-headline);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.account-content .woocommerce-MyAccount-content {
+    padding: 0;
+}
+
+.account-content .woocommerce-MyAccount-content .woocommerce-Addresses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.account-content .woocommerce-MyAccount-content .woocommerce-Address {
+    background: var(--bg-card);
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.account-content .woocommerce-EditAccountForm {
+    max-width: 600px;
+}
+
+.account-content .woocommerce-EditAccountForm .form-row {
+    margin-bottom: 20px;
+}
+
+.account-content .woocommerce-EditAccountForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-secondary);
+}
+
+.account-content .woocommerce-EditAccountForm input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    background: var(--bg-main);
+}
+
+.account-content .woocommerce-EditAccountForm input:focus {
+    outline: none;
+    border-color: var(--brand);
+}
+
+.account-content .woocommerce-EditAccountForm button {
+    background: var(--brand);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-family: var(--font-headline);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.account-content .woocommerce-EditAccountForm button:hover {
+    background: var(--brand-hover);
+}
+
+@media (max-width: 768px) {
+    .account-sidebar {
+        margin-bottom: 20px;
+    }
+    
+    .account-content .woocommerce-Addresses {
+        grid-template-columns: 1fr;
+    }
+    
+    .woocommerce-orders-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .woocommerce-orders-table th,
+    .woocommerce-orders-table td {
+        white-space: nowrap;
+    }
+}
+
+/* ============================= */
+/* IMAGE HOVER EFFECTS           */
+/* ============================= */
+
+img.has-hover-image {
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    img.has-hover-image:hover {
+        opacity: 0.95;
+        transform: scale(1.02);
+    }
+}
+
+img.has-hover-image.hover-active {
+    opacity: 0.95;
+    transform: scale(1.02);
+    position: relative;
+    z-index: 10;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    img.has-hover-image {
+        position: relative;
+    }
+    
+    img.has-hover-image::after {
+        content: "👆 Tap to view alternate";
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.7);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        white-space: nowrap;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    img.has-hover-image:active::after {
+        opacity: 1;
+    }
+}
+
+/* ============================= */
+/* PHOTOSWIPE                    */
+/* ============================= */
+
+#pswp__icn-zoom,#pswp__icn-close,.pswp__button{fill:#fff;}
+.pswp__zoom-icn-bar-h,.pswp__zoom-icn-bar-v{fill:#000;}
+button.pswp__button{ background-image: none !important;  }
+.pswp__button--arrow--prev,.pswp__button--arrow--next{position:absolute; top:48%;}
+.pswp__button--arrow--next svg.pswp__icn {
+    transform: rotate(180deg);
+}
+.pswp__button--arrow--next{right: 20px;}
+
+/* ============================= */
+/* PARALLAX                      */
+/* ============================= */
+
+.parallax-ad-bg{
+ background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+/* ============================= */
+/* MEGA MENU LINKS               */
+/* ============================= */
+
+.mega-link {
+  display: block;
+  font-size: 13px;
+  padding: 6px 0;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: 0.3s;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-family: var(--font-headline);
+}
+
+.mega-link:hover {
+  color: var(--text-primary);
+  transform: translateX(15px);
+}
+
+.mega-link-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+}
+
+.mega-link-image:hover {
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* WIDTH PILL                    */
+/* ============================= */
+
+.width-pill{ border: 1px solid var(--border, #ddd);}
+.width-pill.active{
+  background-color: var(--brand);
+}
+.width-pill:disabled {
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.cta-button{font-size:1rem !important;}
+.blockquote-luxury {max-width: 600px; margin:0 auto;}
+/* Unique wrapper: loom-seasonal-wrapper */
+.loom-seasonal-wrapper {
+    padding: 1.5rem 1rem;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.loom-seasonal-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ----- Section Header ----- */
+.loom-seasonal-header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.loom-seasonal-headline-sub {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6c757d;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.loom-seasonal-heading {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin: 0 0 0.5rem 0;
+}
+
+.loom-seasonal-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #495057;
+    max-width: 650px;
+    margin: 0 auto 1.25rem auto;
+}
+
+.loom-seasonal-btn-main {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.75rem;
+    border: 1px solid #1a1a1a;
+    border-radius: 0;
+    background: transparent;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.loom-seasonal-btn-main:hover {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+}
+.loom-seasonal-btn-main:hover svg {
+    transform: translateX(4px);
+}
+.loom-seasonal-btn-main svg {
+    transition: transform 0.2s ease;
+}
+
+/* ----- 3 Cards Grid ----- */
+.loom-seasonal-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Individual Card */
+.loom-seasonal-card {
+    background: #fff;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+}
+
+.loom-seasonal-img-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+}
+
+.loom-seasonal-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.loom-seasonal-card:hover .loom-seasonal-img {
+    transform: scale(1.03);
+}
+
+.loom-seasonal-card-body {
+    padding: 0.75rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.loom-seasonal-product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.loom-seasonal-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+
+.loom-seasonal-card-btn:hover {
+    border-bottom-color: #1a1a1a;
+}
+.loom-seasonal-card-btn:hover svg {
+    transform: translateX(3px);
+}
+.loom-seasonal-card-btn svg {
+    transition: transform 0.2s ease;
+}
+
+/* ----- Tablet (2 columns) ----- */
+@media (min-width: 600px) {
+    .loom-seasonal-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* ----- Desktop (3 columns) ----- */
+@media (min-width: 992px) {
+    .loom-seasonal-wrapper {
+        padding: 3rem 4rem;
+    }
+
+    .loom-seasonal-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .loom-seasonal-heading {
+        font-size: 2.5rem;
+    }
+
+    .loom-seasonal-text {
+        font-size: 1.05rem;
+    }
+
+    .loom-seasonal-btn-main {
+        font-size: 0.9rem;
+        padding: 0.9rem 2rem;
+    }
+}
+
+/* Optional: fade-in animation */
+.loom-seasonal-wrapper {
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+

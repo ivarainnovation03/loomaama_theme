@@ -1,0 +1,173 @@
+/* ============================================
+   SHIPPING & PACKAGING PAGE SPECIFIC STYLES
+   ============================================ */
+
+:root {
+    --bg-editorial: #F7F3EE;
+    --wild-nettle: #8A9A86;
+    --border: #E5E5E5;
+    --text-main: #1A1A1A;
+}
+
+.hero-editorial {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-editorial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+}
+
+.hero-editorial-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+/* Timeline Cards */
+.timeline-card {
+    border: 1px solid var(--border);
+    padding: 3rem 2rem;
+    background: #fff;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 0px var(--bg-editorial);
+}
+
+.timeline-icon {
+    font-size: 2rem;
+    color: var(--wild-nettle);
+    margin-bottom: 1.5rem;
+}
+
+/* Global Shipping Section */
+.global-shipping-section {
+    background-color: var(--text-main);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.global-shipping-section .eyebrow {
+    color: #a0a0a0;
+}
+
+.global-shipping-section p {
+    color: #cccccc;
+}
+
+.decorative-globe {
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40rem;
+    color: rgba(255,255,255,0.02);
+    pointer-events: none;
+}
+
+/* Return Policy Box */
+.return-policy-box {
+    border: 1px solid var(--border);
+    padding: 4rem;
+    background: var(--bg-editorial);
+    position: relative;
+}
+
+.return-policy-box::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: -10px;
+    bottom: -10px;
+    border: 1px solid var(--border);
+    z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-editorial {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-editorial {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 2rem;
+    }
+    
+    .timeline-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .return-policy-box {
+        padding: 2rem;
+    }
+    
+    .decorative-globe {
+        font-size: 20rem;
+        right: -15%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-editorial {
+        height: 80vh;
+        min-height: 350px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .timeline-card {
+        padding: 1.5rem;
+    }
+    
+    .timeline-icon {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .return-policy-box {
+        padding: 1.5rem;
+    }
+}

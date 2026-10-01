@@ -1,0 +1,414 @@
+/* ============================================
+   SOCIAL CONTRACT PAGE SPECIFIC STYLES
+   ============================================ */
+
+:root {
+    --bg-editorial: #F7F3EE;
+    --wild-nettle: #8A9A86;
+    --border: #E5E5E5;
+    --text-main: #1A1A1A;
+    --text-secondary: #666666;
+    --chart-artisan: #8A9A86;
+    --chart-ops: #A69177;
+    --chart-growth: #4A4A4A;
+}
+
+/* Hero Section */
+.hero-editorial {
+    height: 100vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-editorial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+}
+
+.hero-editorial-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Pricing Infographic */
+.pricing-infographic {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 3rem;
+    box-shadow: 15px 15px 0px var(--bg-editorial);
+}
+
+.stacked-bar-container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.stacked-segment {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Work Sans', serif;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+}
+
+.stacked-segment:hover {
+    opacity: 0.9;
+}
+
+.seg-artisan { background: var(--chart-artisan); }
+.seg-ops { background: var(--chart-ops); }
+.seg-growth { background: var(--chart-growth); }
+
+.breakdown-legend {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .breakdown-legend {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.legend-item {
+    padding-top: 1rem;
+    border-top: 2px solid;
+}
+
+.legend-item.artisan { border-color: var(--chart-artisan); }
+.legend-item.ops { border-color: var(--chart-ops); }
+.legend-item.growth { border-color: var(--chart-growth); }
+
+.sub-breakdown {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.sub-breakdown li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed var(--border);
+}
+
+.sub-breakdown li:last-child {
+    border-bottom: none;
+}
+
+/* Wage Table */
+.luxury-table-wrapper {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 2rem;
+}
+
+.luxury-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.luxury-table th {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-main);
+    padding: 1.5rem 1rem;
+    border-bottom: 2px solid var(--text-main);
+    text-align: left;
+}
+
+.luxury-table td {
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.luxury-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Stat Box */
+.stat-box {
+    border: 1px solid var(--text-main);
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--bg-editorial);
+}
+
+/* Operations Grid */
+.ops-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+    .ops-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .ops-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.ops-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.ops-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--text-main);
+}
+
+.ops-icon {
+    font-size: 1.5rem;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+/* Non-Negotiables List */
+.non-negotiables-list {
+    list-style: none;
+    padding: 0;
+}
+
+.non-negotiables-list li {
+    font-family: 'Work Sans', serif;
+    font-size: 1.25rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.non-negotiables-list li i {
+    color: #b2b2b2;
+    font-size: 1rem;
+}
+
+/* Verification Badge */
+.verification-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dashed var(--text-main);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--wild-nettle);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .pricing-infographic {
+        padding: 2rem;
+    }
+    
+    .stacked-bar-container {
+        height: 50px;
+    }
+    
+    .stacked-segment {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-editorial {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 2rem;
+    }
+    
+    .pricing-infographic {
+        padding: 1.5rem;
+    }
+    
+    .luxury-table th,
+    .luxury-table td {
+        padding: 1rem 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .stat-box {
+        padding: 2rem 1.5rem;
+    }
+    
+    .non-negotiables-list li {
+        font-size: 1rem;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-editorial {
+        height: 80vh;
+        min-height: 400px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stacked-bar-container {
+        height: 40px;
+    }
+    
+    .stacked-segment {
+        font-size: 0.7rem;
+    }
+    
+    .luxury-table th,
+    .luxury-table td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .ops-card {
+        padding: 1.5rem;
+    }
+    
+    .verification-badge {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+}
+
+.jarallax {
+    position: relative;
+    z-index: 0;
+}
+
+.jarallax > .jarallax-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Content should be above video */
+.hero-editorial-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fallback for browsers that don't support video */
+.hero-editorial .jarallax-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hero Section with Manual Video */
+.hero-video-section {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-editorial-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile optimization - disable video on mobile to save bandwidth */
+@media (max-width: 768px) {
+    .hero-background-video {
+        display: none;
+    }
+    
+    .hero-video-section .hero-background-image {
+        display: block;
+    }
+}

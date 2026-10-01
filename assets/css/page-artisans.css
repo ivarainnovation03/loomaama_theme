@@ -1,0 +1,251 @@
+/* ============================================
+   ARTISANS PAGE SPECIFIC STYLES
+   ============================================ */
+
+
+.text-overlay {
+    color:#eee !important;
+}
+/* Hero Section */
+.hero-editorial {
+    height: 90vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+}
+
+.hero-editorial-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Artisan Cards */
+.artisan-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.artisan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.artisan-img-wrapper {
+    position: relative;
+    padding-top: 120%;
+    overflow: hidden;
+    background: var(--bg-editorial);
+}
+
+.artisan-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.artisan-card:hover .artisan-img {
+    transform: scale(1.05);
+}
+
+.artisan-quote {
+    font-family: 'Work Sans', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    border-left: 2px solid var(--text-main);
+    padding-left: 1rem;
+    margin-top: 1.5rem;
+    color: var(--text-main);
+}
+
+/* Profit Breakdown */
+.profit-breakdown {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profit-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.profit-bar-bg {
+    height: 8px;
+    background: var(--border);
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.profit-bar-fill {
+    height: 100%;
+    background: var(--text-main);
+    border-radius: 4px;
+}
+
+.profit-bar-fill.artisan { background: var(--wild-nettle); }
+.profit-bar-fill.ops { background: #A69177; }
+.profit-bar-fill.brand { background: #8A8A8A; }
+.profit-bar-fill.founder { background: #4A4A4A; }
+
+/* Conditions List */
+.conditions-list {
+    list-style: none;
+    padding: 0;
+}
+
+.conditions-list li {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.conditions-list li i {
+    color: var(--wild-nettle);
+    font-size: 1.2rem;
+}
+
+.conditions-list li:last-child {
+    border-bottom: none;
+}
+
+/* Stat Box */
+.stat-box {
+    background: #fff;
+    border: 1px solid var(--text-main);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .hero-editorial {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-editorial {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .artisan-card {
+        margin-bottom: 1rem;
+    }
+    
+    .artisan-quote {
+        font-size: 0.95rem;
+        margin-top: 1rem;
+    }
+    
+    .profit-header {
+        font-size: 0.8rem;
+    }
+    
+    .conditions-list li {
+        font-size: 1rem;
+        padding: 0.75rem 0;
+    }
+    
+    .stat-box {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-editorial {
+        height: 70vh;
+        min-height: 450px;
+    }
+   
+    
+    .hero-editorial-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .artisan-card .p-4 {
+        padding: 1.25rem !important;
+    }
+    
+    .artisan-quote {
+        font-size: 0.85rem;
+    }
+    
+    .profit-breakdown {
+        gap: 1rem;
+    }
+    
+    .profit-header {
+        font-size: 0.7rem;
+    }
+    
+    .conditions-list li {
+        font-size: 0.9rem;
+        gap: 0.75rem;
+    }
+    
+    .conditions-list li i {
+        font-size: 1rem;
+    }
+}

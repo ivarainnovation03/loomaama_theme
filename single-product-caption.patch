@@ -1,0 +1,90 @@
+--- a/single-product.php
++++ b/single-product.php
+@@ -600,3 +600,36 @@
+ </aside>
+ 
++<style>
++/* Product gallery captions */
++#productGallery .gallery-media-item figure {
++    position: relative;
++    width: 100%;
++    height: 100%;
++    margin: 0;
++}
++
++#productGallery .gallery-media-caption {
++    position: absolute;
++    right: 0;
++    bottom: 0;
++    left: 0;
++    z-index: 2;
++    margin: 0;
++    padding: 32px 20px 16px;
++    color: #fff;
++    background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0));
++    font-size: 13px;
++    line-height: 1.45;
++    text-align: left;
++    pointer-events: none;
++}
++
++@media (max-width: 767px) {
++    #productGallery .gallery-media-caption {
++        padding: 28px 14px 12px;
++        font-size: 12px;
++    }
++}
++</style>
++
+ <main>
+@@ -760,17 +760,19 @@
+                             <a href="<?php echo esc_url($media['url']); ?>"
+                                 class="glightbox gallery-media-item <?php echo $is_active_media ? 'is-active' : ''; ?>"
+                                 data-gallery-index="<?php echo esc_attr($media_index); ?>"
++                                <?php if (!empty($media['caption'])) : ?>
++                                    data-description="<?php echo esc_attr(wp_strip_all_tags($media['caption'])); ?>"
++                                <?php endif; ?>
+                                 aria-hidden="<?php echo $is_active_media ? 'false' : 'true'; ?>">
+                                 <figure>
+                                     <img <?php echo (!empty($media['id']) && $media['id'] === $featured_image_id) ? 'id="main-product-image"' : ''; ?>
+                                         src="<?php echo esc_url(!empty($media['image']) ? $media['image'] : $media['url']); ?>"
+                                         alt="<?php echo esc_attr($media['alt']); ?>"
+                                         loading="<?php echo $is_active_media ? 'eager' : 'lazy'; ?>">
+-									 <?php if (!empty($media['caption'])): ?>
+-                                            <figcaption class="wp-element-caption">
+-                                                <?php echo ($media['caption']) ? esc_html($media['caption']) : ''; ?>
+-                                            </figcaption>                                      
+-                                      <?php endif; ?>
++									<?php if (!empty($media['caption'])) : ?>
++                                        <figcaption class="gallery-media-caption wp-element-caption">
++                                            <?php echo esc_html($media['caption']); ?>
++                                        </figcaption>
++                                    <?php endif; ?>
+                                 </figure>
+-								
+                             </a>
+@@ -1900,15 +1900,23 @@
+                 var fullUrl = img.full || img.url || img.src || '';
+                 var displayUrl = img.image || img.large || img.url || img.src || fullUrl;
+                 var alt = escapeHtml(img.alt || '');
++                var caption = escapeHtml(img.caption || img.description || '');
++                var captionMarkup = caption
++                    ? `<figcaption class="gallery-media-caption wp-element-caption">${caption}</figcaption>`
++                    : '';
++                var descriptionAttribute = caption
++                    ? ` data-description="${caption}"`
++                    : '';
+                 var activeClass = index === 0 ? ' is-active' : '';
+                 var ariaHidden = index === 0 ? 'false' : 'true';
+ 
+                 if (!fullUrl) return;
+ 
+                 galleryHtml += `
+-                    <a href="${fullUrl}" class="glightbox gallery-media-item${activeClass}" data-gallery-index="${index}" aria-hidden="${ariaHidden}">
++                    <a href="${fullUrl}" class="glightbox gallery-media-item${activeClass}" data-gallery-index="${index}"${descriptionAttribute} aria-hidden="${ariaHidden}">
+                         <figure>
+                             <img src="${displayUrl}" alt="${alt}" loading="${index === 0 ? 'eager' : 'lazy'}">
++                            ${captionMarkup}
+                         </figure>
+                     </a>
+                 `;

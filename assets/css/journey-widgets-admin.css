@@ -1,0 +1,79 @@
+.lm-journey-widget-form {
+  margin: 10px 0;
+}
+
+.lm-widget-group {
+  margin: 0 0 10px;
+  border: 1px solid #dcdcde;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.lm-widget-group > summary {
+  cursor: pointer;
+  padding: 10px 12px;
+  font-weight: 600;
+  background: #f6f7f7;
+  border-radius: 6px;
+  user-select: none;
+}
+
+.lm-widget-group[open] > summary {
+  border-bottom: 1px solid #dcdcde;
+  border-radius: 6px 6px 0 0;
+}
+
+.lm-widget-group__body {
+  padding: 12px;
+}
+
+.lm-widget-field {
+  margin: 0 0 14px;
+}
+
+.lm-widget-field:last-child {
+  margin-bottom: 0;
+}
+
+.lm-widget-field > label:not(.lm-widget-checkbox) {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.lm-widget-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-weight: 600;
+}
+
+.lm-widget-checkbox input {
+  margin-top: 2px;
+}
+
+.lm-widget-field__description {
+  display: block;
+  margin-top: 5px;
+  color: #646970;
+  line-height: 1.4;
+}
+
+.lm-media-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+.lm-media-url {
+  direction: ltr;
+}
+
+.lm-widget-field .wp-picker-container {
+  display: block;
+}
+
+.lm-widget-field .wp-picker-input-wrap label {
+  display: inline-block;
+}

@@ -1,0 +1,17 @@
+/*
+Theme Name: Loomaama
+Theme URI: https://yourdomain.com
+Author: Your Name
+Author URI: https://yourdomain.com
+Description: A premium WooCommerce theme with custom hero sections and widgetized product category grids
+Version: 1.0.0
+License: GPL v2 or later
+Text Domain: loomaama
+Requires at least: 5.0
+Tested up to: 6.4
+Requires PHP: 7.4
+WC requires at least: 5.0
+WC tested up to: 8.3
+*/
+
+/* Theme styles will be enqueued from assets/css/main.css */

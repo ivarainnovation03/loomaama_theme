@@ -1,0 +1,440 @@
+/* ============================================
+   SIZE & FIT GUIDE PAGE SPECIFIC STYLES
+   ============================================ */
+
+:root {
+    --cream: #F4EEE4;
+    --paper: #FBF8F3;
+    --taupe: #9E8574;
+    --ink: #1a1a1b;
+    --muted: #6f625a;
+    --line: rgba(158, 133, 116, 0.32);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Announcement Bar */
+.size-announcement {
+    padding: 14px 24px;
+    text-align: center;
+    background: var(--ink);
+    color: var(--cream);
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+/* Hero Section */
+.size-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    min-height: 84vh;
+    background: var(--cream);
+}
+
+.size-hero-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.size-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.size-hero-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 90px 8vw;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-bottom: 18px;
+}
+
+.size-hero-copy h1 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 76px;
+    line-height: 0.94;
+    margin: 0 0 28px;
+}
+
+.size-hero-copy p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.78;
+    max-width: 560px;
+}
+
+/* Category Grid */
+.size-category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    background: var(--line);
+}
+
+.size-category {
+    min-height: 330px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 24px;
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.size-category span {
+    background: rgba(251, 248, 243, 0.84);
+    padding: 12px 16px;
+    font-size: 12px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+}
+
+.size-category:hover {
+    opacity: 0.9;
+}
+
+/* Section Styles */
+.size-section {
+    padding: 88px 8vw;
+}
+
+.size-center {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.size-section.alt {
+    background: var(--cream);
+}
+
+.size-section h2 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    font-size: 46px;
+    line-height: 1.05;
+    margin: 0 0 20px;
+}
+
+.size-section p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.78;
+}
+
+/* Size Tabs */
+.size-tabs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 38px 0 46px;
+}
+
+.size-tabs a {
+    border: 1px solid var(--taupe);
+    padding: 12px 22px;
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.size-tabs a:hover {
+    background: var(--taupe);
+    color: var(--paper);
+}
+
+/* Chart Blocks */
+.size-chart-block {
+    max-width: 1120px;
+    margin: 0 auto 70px;
+}
+
+.size-chart-block:last-child {
+    margin-bottom: 0;
+}
+
+.size-chart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    gap: 24px;
+}
+
+.size-chart-head h3 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.unit {
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--taupe);
+}
+
+.size-table-wrap {
+    overflow-x: auto;
+}
+
+.size-table-wrap table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+}
+
+.size-table-wrap th,
+.size-table-wrap td {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 14px;
+    text-align: left;
+    color: var(--muted);
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.size-table-wrap th {
+    color: var(--ink);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 500;
+}
+
+.size-note {
+    margin-top: 14px;
+    font-size: 15px;
+    color: var(--muted);
+}
+
+/* Gallery */
+.size-gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: 1px;
+    background: var(--line);
+}
+
+.size-gallery-item {
+    min-height: 440px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Split Layout */
+.size-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 74px;
+    align-items: center;
+}
+
+.size-photo {
+    min-height: 560px;
+    background-size: cover;
+    background-position: center;
+}
+
+.size-photo-measure {
+    background-image: url('https://images.unsplash.com/photo-1523381294911-8d3cead13475?auto=format&fit=crop&w=1300&q=80');
+}
+
+.size-photo-fit {
+    background-image: url('https://images.unsplash.com/photo-1506629905607-d9e297d2c88d?auto=format&fit=crop&w=1300&q=80');
+}
+
+/* Measurement List */
+.size-measure-list {
+    border-top: 1px solid var(--line);
+    margin-top: 30px;
+}
+
+.size-measure-row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 26px;
+    border-bottom: 1px solid var(--line);
+    padding: 19px 0;
+}
+
+.size-measure-row strong {
+    font-weight: 500;
+    color: var(--ink);
+}
+
+.size-measure-row span {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* Fit Guide Cards */
+.size-fit-guide {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    margin-top: 46px;
+}
+
+.size-fit-card {
+    background: var(--paper);
+    padding: 42px 32px;
+    min-height: 240px;
+}
+
+.size-fit-card h3 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 14px;
+}
+
+.size-fit-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Help Section */
+.size-help {
+    text-align: center;
+    background: var(--cream);
+    padding: 92px 8vw;
+}
+
+.size-help-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    margin-top: 44px;
+}
+
+.size-help-card {
+    background: var(--paper);
+    padding: 48px 30px;
+}
+
+.size-help-card h3 {
+    font-family: "Work Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0 0 14px;
+}
+
+.size-help-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.size-button {
+    display: inline-block;
+    border: 1px solid var(--taupe);
+    padding: 14px 26px;
+    margin-top: 12px;
+    color: var(--ink);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.size-button:hover {
+    background: var(--taupe);
+    color: var(--paper);
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .size-hero h1 {
+        font-size: 54px;
+    }
+    
+    .size-category-grid,
+    .size-split,
+    .size-fit-guide,
+    .size-gallery,
+    .size-help-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .size-section {
+        padding: 68px 6vw;
+    }
+    
+    .size-photo,
+    .size-gallery-item,
+    .size-category {
+        min-height: 320px;
+    }
+    
+    .size-chart-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .size-hero {
+        grid-template-columns: 1fr;
+    }
+    
+    .size-hero-img {
+        order: -1;
+        min-height: 400px;
+    }
+    
+    .size-measure-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .size-hero-copy h1 {
+        font-size: 42px;
+    }
+    
+    .size-section h2 {
+        font-size: 32px;
+    }
+    
+    .size-chart-head h3 {
+        font-size: 24px;
+    }
+    
+    .size-fit-card,
+    .size-help-card {
+        padding: 30px 20px;
+    }
+    
+    .size-fit-card h3 {
+        font-size: 22px;
+    }
+    
+    .size-tabs a {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+}

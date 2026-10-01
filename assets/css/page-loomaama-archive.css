@@ -1,0 +1,697 @@
+/* ============================================
+   LOOMAAMA ARCHIVE PAGE - LUXURIOUS STYLES
+   ============================================ */
+
+:root {
+    --cream: #F4EEE4;
+    --paper: #FBF8F3;
+    --taupe: #9E8574;
+    --taupe-light: #C8B7AA;
+    --ink: #1a1a1b;
+    --muted: #6f625a;
+    --line: rgba(158, 133, 116, 0.32);
+    --gold: #D4AF37;
+    --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 20px 50px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 40px 80px rgba(0, 0, 0, 0.12);
+    --transition-smooth: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-bottom: 18px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.eyebrow::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 1px;
+    background: var(--taupe);
+    opacity: 0.5;
+}
+
+h1, h2, h3 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+}
+
+h1 {
+    font-size: 86px;
+    line-height: 0.92;
+    margin: 0 0 24px;
+}
+
+h2 {
+    font-size: 50px;
+    line-height: 1.04;
+    margin: 0 0 22px;
+}
+
+h3 {
+    font-size: 30px;
+    margin: 0 0 12px;
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.78;
+    color: var(--muted);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.archive-hero {
+    min-height: 92vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+}
+
+.archive-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+}
+
+.archive-hero-inner {
+    padding: 0 8vw 90px;
+    color: white;
+    max-width: 980px;
+    position: relative;
+    z-index: 2;
+}
+
+.archive-hero .eyebrow {
+    color: var(--cream);
+}
+
+.archive-hero .eyebrow::after {
+    background: var(--cream);
+}
+
+.archive-hero h1 {
+    color: white;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.archive-hero p {
+    color: #f7f1ea;
+    font-size: 20px;
+    max-width: 720px;
+}
+
+.caption {
+    font-size: 13px;
+    color: #efe6dc;
+    margin-top: 22px;
+    max-width: 620px;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   COMMITMENTS SECTION
+   ============================================ */
+.archive-commitments {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+    background: var(--paper);
+}
+
+.commitment {
+    padding: 44px 28px;
+    text-align: center;
+    border-right: 1px solid var(--line);
+    background: var(--paper);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.commitment:last-child {
+    border-right: 0;
+}
+
+.commitment::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--taupe);
+    transition: width 0.4s ease;
+}
+
+.commitment:hover::before {
+    width: 100%;
+}
+
+.commitment-icon {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--taupe);
+    border-radius: 50%;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.commitment-icon i {
+    font-size: 20px;
+    color: var(--taupe);
+}
+
+.commitment:hover .commitment-icon {
+    background: var(--taupe);
+    transform: scale(1.05);
+}
+
+.commitment:hover .commitment-icon i {
+    color: var(--paper);
+}
+
+.commitment p {
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 0;
+    color: var(--ink);
+    font-weight: 500;
+}
+
+/* ============================================
+   GENERAL SECTION STYLES
+   ============================================ */
+.archive-section {
+    padding: 95px 8vw;
+}
+
+.archive-intro {
+    max-width: 830px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ============================================
+   TIMELINE SECTION
+   ============================================ */
+.archive-timeline {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 8vw 40px;
+}
+
+.time-block {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 70px;
+    padding: 88px 0;
+    border-bottom: 1px solid var(--line);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.time-block:nth-child(1) { animation-delay: 0.1s; }
+.time-block:nth-child(2) { animation-delay: 0.2s; }
+.time-block:nth-child(3) { animation-delay: 0.3s; }
+.time-block:nth-child(4) { animation-delay: 0.4s; }
+.time-block:nth-child(5) { animation-delay: 0.5s; }
+.time-block:nth-child(6) { animation-delay: 0.6s; }
+
+.time-block:first-child {
+    border-top: 1px solid var(--line);
+}
+
+.year {
+    font-family: "Work Sans", sans-serif;
+    font-size: 72px;
+    letter-spacing: -0.05em;
+    color: var(--taupe);
+    position: sticky;
+    top: 40px;
+    align-self: start;
+    font-weight: 600;
+    background: linear-gradient(135deg, var(--taupe) 0%, var(--taupe-light) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 52px;
+    align-items: center;
+}
+
+.story-reverse {
+    direction: rtl;
+}
+
+.story-reverse .story-copy {
+    direction: ltr;
+}
+
+.story-img {
+    min-height: 480px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.story-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.2) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.story-img:hover::before {
+    opacity: 1;
+}
+
+.story-img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+.story-copy .meta {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-bottom: 18px;
+    display: inline-block;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 6px;
+}
+
+.story-copy h3 {
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.story-copy p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+/* ============================================
+   FULL IMAGE SECTION
+   ============================================ */
+.archive-full-image {
+    min-height: 680px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    margin: 20px 0;
+}
+
+.archive-full-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.3) 100%);
+}
+
+/* ============================================
+   QUOTE SECTION
+   ============================================ */
+.archive-quote {
+    background: var(--cream);
+    text-align: center;
+    padding: 120px 8vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.archive-quote::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Work Sans", sans-serif;
+    font-size: 180px;
+    color: rgba(158, 133, 116, 0.08);
+    line-height: 1;
+}
+
+.archive-quote h2 {
+    max-width: 950px;
+    margin: 0 auto 26px;
+    position: relative;
+    z-index: 1;
+    font-size: 54px;
+}
+
+.archive-quote p {
+    max-width: 650px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   ARCHIVE INDEX SECTION
+   ============================================ */
+.archive-index {
+    background: var(--paper);
+    padding: 95px 8vw;
+}
+
+.archive-list {
+    max-width: 1100px;
+    margin: 55px auto 0;
+    border-top: 1px solid var(--line);
+}
+
+.archive-row {
+    display: grid;
+    grid-template-columns: 160px 1fr 200px;
+    gap: 40px;
+    border-bottom: 1px solid var(--line);
+    padding: 32px 0;
+    align-items: center;
+    transition: var(--transition-smooth);
+}
+
+.archive-row:hover {
+    background: linear-gradient(90deg, rgba(158,133,116,0.05) 0%, transparent 100%);
+    padding-left: 20px;
+}
+
+.archive-row span {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    font-weight: 600;
+}
+
+.archive-row strong {
+    font-family: "Work Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--ink);
+}
+
+.archive-row p {
+    font-size: 15px;
+    margin: 0;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.archive-cta {
+    text-align: center;
+    background: var(--ink);
+    padding: 120px 8vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.archive-cta::before {
+    content: '⟡';
+    position: absolute;
+    font-size: 300px;
+    color: rgba(255, 255, 255, 0.02);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: serif;
+}
+
+.archive-cta .eyebrow,
+.archive-cta h2,
+.archive-cta p {
+    color: var(--cream);
+    position: relative;
+    z-index: 1;
+}
+
+.archive-cta .eyebrow::after {
+    background: var(--cream);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.archive-cta h2 {
+    font-size: 54px;
+}
+
+.archive-button {
+    display: inline-block;
+    border: 1px solid var(--cream);
+    padding: 16px 34px;
+    margin-top: 28px;
+    color: var(--cream);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 12px;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: transparent;
+}
+
+.archive-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--cream);
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.archive-button:hover {
+    color: var(--ink);
+    letter-spacing: 0.18em;
+}
+
+.archive-button:hover::before {
+    left: 0;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1100px) {
+    h1 {
+        font-size: 56px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    .archive-commitments {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .commitment {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+    }
+    
+    .time-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .year {
+        position: relative;
+        top: auto;
+        font-size: 48px;
+    }
+    
+    .story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .story-reverse {
+        direction: ltr;
+    }
+    
+    .archive-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        text-align: left;
+    }
+    
+    .archive-section,
+    .archive-index,
+    .archive-cta,
+    .archive-quote {
+        padding: 72px 6vw;
+    }
+    
+    .archive-timeline {
+        padding: 0 6vw 40px;
+    }
+    
+    .story-img {
+        min-height: 360px;
+    }
+    
+    .archive-full-image {
+        min-height: 400px;
+        background-attachment: scroll;
+    }
+    
+    .archive-quote h2,
+    .archive-cta h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 42px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    .archive-hero-inner {
+        padding: 0 6vw 60px;
+    }
+    
+    .archive-hero p {
+        font-size: 16px;
+    }
+    
+    .archive-commitments {
+        grid-template-columns: 1fr;
+    }
+    
+    .commitment {
+        padding: 30px 20px;
+    }
+    
+    .time-block {
+        padding: 50px 0;
+    }
+    
+    .year {
+        font-size: 36px;
+    }
+    
+    .story-copy h3 {
+        font-size: 26px;
+    }
+    
+    .story-img {
+        min-height: 280px;
+    }
+    
+    .archive-quote h2,
+    .archive-cta h2 {
+        font-size: 32px;
+    }
+    
+    .archive-cta {
+        padding: 80px 6vw;
+    }
+    
+    .archive-button {
+        padding: 12px 28px;
+    }
+    
+    .archive-row strong {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 36px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    .caption {
+        font-size: 11px;
+    }
+    
+    .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+    }
+    
+    .story-img {
+        min-height: 220px;
+    }
+    
+    .archive-full-image {
+        min-height: 300px;
+    }
+    
+    .archive-quote {
+        padding: 60px 6vw;
+    }
+    
+    .archive-quote::before {
+        font-size: 100px;
+    }
+}

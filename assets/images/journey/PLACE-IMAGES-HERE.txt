@@ -1,0 +1,17 @@
+Place the original media files here, or replace their URLs inside each widget:
+
+Founder 1.png
+Founder 2.png
+Founder 3.png
+Founder 4.png
+mt everest.png
+Mt lhotse.png
+landscape.png
+landscape 2.png
+Nettle image.png
+Gita Kulung.png
+Ranjita Kulung.png
+Sumitra Kulung.jpeg
+shawl.jpg
+Poncho.png
+Beanie.jpg

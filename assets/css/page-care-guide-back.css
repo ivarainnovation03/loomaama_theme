@@ -1,0 +1,225 @@
+/* ============================================
+   CARE GUIDE PAGE SPECIFIC STYLES
+   ============================================ */
+
+
+
+/* Hero Section */
+.hero-editorial {
+    height: 80vh;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-editorial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+
+.hero-editorial-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+
+/* Golden Rules Cards */
+.rule-card {
+    background: #fff;
+    padding: 2.5rem;
+    border: 1px solid var(--border);
+    height: 100%;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.rule-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--text-main);
+}
+
+.rule-number {
+    font-family: 'Work Sans', serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--bg-editorial);
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    line-height: 1;
+    z-index: 1;
+}
+
+.rule-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Fiber Care Tabs */
+.care-tabs-nav {
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    margin-bottom: 3rem;
+}
+
+.care-tabs-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.care-tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 1rem 2rem;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.care-tab-btn:hover {
+    color: var(--text-main);
+}
+
+.care-tab-btn.active {
+    color: var(--text-main);
+    border-bottom-color: var(--text-main);
+    font-weight: 600;
+}
+
+/* Care Detail Items */
+.care-detail-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.care-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--wild-nettle);
+}
+
+.care-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.care-list li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.care-list li::before {
+    content: '\2666';
+    position: absolute;
+    left: 0;
+    color: var(--text-main);
+}
+/* Responsive */
+@media (max-width: 1200px) {
+   
+}
+@media (max-width: 991px) {
+    .hero-editorial {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .hero-editorial-content h1 {
+        font-size: 1.8rem !important;
+    }
+     .headline{font-size:1.8rem !important;}
+}
+
+@media (max-width: 768px) {
+    .rule-card {
+        padding: 1.5rem;
+    }
+    
+    .rule-number {
+        font-size: 2rem;
+        top: 0.5rem;
+        right: 1rem;
+    }
+    
+    .care-tab-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .care-detail-item {
+        gap: 1rem;
+    }
+    
+    .care-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-editorial {
+        height: 80vh;
+        min-height: 350px;
+    }
+    .headline{font-size:1.5rem !important;}
+    
+    .hero-editorial-content h1 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-editorial-content p {
+        font-size: 1rem;
+    }
+    
+    .care-tabs-nav {
+        margin-bottom: 1.5rem;
+    }
+    
+    .tab-content {
+        padding: 1.5rem !important;
+    }
+}
